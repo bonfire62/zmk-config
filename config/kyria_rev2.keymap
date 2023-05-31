@@ -69,8 +69,9 @@
 	&bt BT_CLR  &kp A &kp R &kp S &kp T &kp G                                               &kp M &kp N  &kp E  &kp I   &kp O    &kp SQT
 	&kp LCTL &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LGUI      	   &kp LSHFT &kp ESC &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                 &kp LALT &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp BSPC  &kp TAB &kp BSPC &mo MEDIALAYER
-			>
+			>;
 
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 
         fn_layer
@@ -80,7 +81,7 @@
 	&bt BT_CLR  &kp A &kp R &kp S &kp T &kp G                                               &kp M &kp N  &kp E  &kp I   &kp O    &kp SQT
 	&kp LCTL &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LGUI      	   &kp LSHFT &kp ESC &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                 &kp LALT &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp BSPC  &kp TAB &kp BSPC &mo MEDIALAYER
-			>
+			>;
 
         };
     
