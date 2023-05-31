@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk/rgb.h>
+
+#define DEFAULT 0
+#define FNLAYER   1
+#define MEDIALAYER   2
 
 &pinctrl {
     spi3_default: spi3_default {
@@ -53,7 +58,6 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
-
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   \  |
@@ -61,13 +65,29 @@
 // | BT_CLR|  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
 //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 			bindings = <
-	&kp DEL   &kp Q &kp W &kp F &kp P &kp B                             &kp J &kp L  &kp U     &kp Y   &kp SEMI    &kp BSLH
-	&bt BT_CLR  &kp A &kp R &kp S &kp T &kp G                             &kp M &kp N  &kp E     &kp I   &kp O &kp SQT
-	&kp LCTL &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LGUI        	&kp LSHFT &kp ESC &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                 &kp LALT &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp BSPC  &kp TAB &kp BSPC &kp RALT
-			>;
+	&kp DEL   &kp Q &kp W &kp F &kp P &kp B                                                 &kp J &kp L  &kp U  &kp Y   &kp SEMI &kp BSLH
+	&bt BT_CLR  &kp A &kp R &kp S &kp T &kp G                                               &kp M &kp N  &kp E  &kp I   &kp O    &kp SQT
+	&kp LCTL &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LGUI      	   &kp LSHFT &kp ESC &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	                 &kp LALT &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp BSPC  &kp TAB &kp BSPC &mo MEDIALAYER
+			>
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
+
+        fn_layer
+        {
+			bindings = <
+	&kp DEL   &kp Q &kp W &kp F &kp P &kp B                                                 &kp J &kp L  &kp U  &kp Y   &kp SEMI &kp BSLH
+	&bt BT_CLR  &kp A &kp R &kp S &kp T &kp G                                               &kp M &kp N  &kp E  &kp I   &kp O    &kp SQT
+	&kp LCTL &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LGUI      	   &kp LSHFT &kp ESC &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	                 &kp LALT &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp BSPC  &kp TAB &kp BSPC &mo MEDIALAYER
+			>
+
+        };
+    
+        media_layer
+        {
+
+        };
 	};
 };
