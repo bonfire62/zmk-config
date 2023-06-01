@@ -88,7 +88,7 @@
         media_layer
         {
 			bindings = <
-	&rgb_ug RGB_TOG  &kp Q &kp W &kp F &kp P &kp B                                                 &kp J &kp L  &kp U  &kp Y   &kp SEMI &kp BSLH
+	&rgb_ug RGB_TOG  &kp Q &kp W &kp  &kp P &kp B                                                 &kp J &kp L  &kp U  &kp Y   &kp SEMI &kp BSLH
 	&rgb_ug RGB_EFF &kp A &kp R &kp S &kp T &kp G                                               &kp M &kp N  &kp E  &kp I   &kp O    &kp SQT
 	&kp LCTL &kp Z &kp X &kp C &kp D &kp V &kp LSHFT &kp LGUI      	   &kp LSHFT &kp ESC &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
 	                 &kp LALT &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp BSPC  &kp TAB &kp BSPC &mo MEDIALAYER
